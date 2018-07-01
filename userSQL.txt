@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS Paper;
+DROP TABLE IF EXISTS ProgramCommittee;
+DROP TABLE IF EXISTS Review;
+
+Create TABLE Paper 
+( 
+	PapID VARCHAR(10) NOT NULL, 
+	PapAuthor VARCHAR(20) NOT NULL, 
+	PapTitle VARCHAR(30) NOT NULL, 
+	PapAbstract VARCHAR(30) NOT NULL, 
+	PapPDF VARCHAR(30) NOT NULL, 
+	PRIMARY KEY(PapID) 
+);
+
+Create TABLE ProgramCommittee 
+( 
+	PCID VARCHAR(10) NOT NULL, 
+	PCName VARCHAR(20) NOT NULL, 
+	PCNumAssigned VARCHAR(1) NOT NULL,
+	PRIMARY KEY(PCID) 
+);
+
+Create TABLE Review 
+( 
+	RevID VARCHAR(10) NOT NULL, 
+	RevName VARCHAR(20) NOT NULL, 
+	RevDescript VARCHAR(100) NOT NULL,
+	RevDecision bool,
+	RevDate date,
+	PRIMARY KEY(RevID) 
+);

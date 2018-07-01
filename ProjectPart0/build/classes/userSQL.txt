@@ -1,0 +1,35 @@
+DROP TABLE Paper CASCADE CONSTRAINTS;
+DROP TABLE ProgramCommittee CASCADE CONSTRAINTS;
+DROP TABLE Review CASCADE CONSTRAINTS;
+
+Create TABLE Paper 
+( 
+	PapID VARCHAR(10) NOT NULL, 
+	PapAuthor VARCHAR(20) NOT NULL, 
+	PapTitle VARCHAR(30) NOT NULL, 
+	PapAbstract VARCHAR(30) NOT NULL, 
+	PapPDF VARCHAR(30) NOT NULL, 
+	FOREIGN Key(PCID) REFERENCES ProgramCommittee(PCID),
+	PRIMARY KEY(PapID) 
+)
+CONSTRAINT PCID_Assigned _Count CHECK( COUNT(PCID) = 3);
+
+Create TABLE ProgramCommittee 
+( 
+	PCID VARCHAR(10) NOT NULL, 
+	PCName VARCHAR(20) NOT NULL, 
+	PCNumAssigned Number(1) NOT NULL,
+	PRIMARY KEY(PCID) 
+)
+CONSTRAINT Num_Assigned _Count CHECK( COUNT(PCNumAssigned) = 5);
+
+Create TABLE Review 
+( 
+	RevID VARCHAR(10) NOT NULL, 
+	RevName VARCHAR(20) NOT NULL, 
+	RevDescript VARCHAR(100) NOT NULL,
+	RevDecision bool,
+	RevDate date,
+	FOREIGN Key(PCID) REFERENCES ProgramCommittee(PCID),
+	PRIMARY KEY(RevID) 
+);
