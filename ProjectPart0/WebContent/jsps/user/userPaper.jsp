@@ -22,9 +22,9 @@
 <p style="color: red; font-weight: 900"> ${msg}</p>
 <form action="<c:url value='/ConfManagement'/>" method="post">
 	<input type="hidden" name="method" value="Initialize"/>
-			Program Committee ID to Change：	<input type="text" name="username" /><br/>
+			Paper ID to Change：	<input type="text" name="username" /><br/>
 			What column do you want to change (UPDATE ONLY)? <input type="password" name="password" /><br/>
-			What do you want the new value to be (Update ONLY)? <input type="password" name="password" /><br/>
+			What do you want the new value to be (UPDATE ONLY)? <input type="password" name="password" /><br/>
 	<button type="submit" name="button" value="InitButton">Delete</button>
 	<button type="submit" name="button" value="InitButton">Update</button>
 </form>
@@ -32,8 +32,11 @@
 <h1>-User- Paper INSERT:</h1>
 <form action="<c:url value='/ConfManagement'/>" method="post">
 	<input type="hidden" name="method" value="Initialize"/>
-			Program Committee Member Name：	<input type="text" name="username" /><br/>
-			How many papers are assigned to this member? <input type="password" name="password" /><br/>
+			Paper Author：	<input type="text" name="username" /><br/>
+			Paper Title: <input type="password" name="password" /><br/>
+			Paper Abstract: <input type="password" name="password" /><br/>
+			Paper PDF: <input type="password" name="password" /><br/>
+			 <input type="password" name="password" /><br/>
 	<button type="submit" name="button" value="InitButton">Insert</button>
 </form>
 

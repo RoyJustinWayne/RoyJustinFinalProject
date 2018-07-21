@@ -12,6 +12,40 @@
     <servlet-name>ConfManagement</servlet-name>
     <url-pattern>/ConfManagement</url-pattern>
   </servlet-mapping>
+   
+   <servlet>
+    <description></description>
+    <display-name>UpdateServ</display-name>
+    <servlet-name>UpdateServ</servlet-name>
+    <servlet-class>user.web.servlet.UpdateServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServ</servlet-name>
+    <url-pattern>/UpdateServ</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>PaperServ</display-name>
+    <servlet-name>PaperServ</servlet-name>
+    <servlet-class>user.web.servlet.PaperServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaperServ</servlet-name>
+    <url-pattern>/PaperServ</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ReviewServ</display-name>
+    <servlet-name>ReviewServ</servlet-name>
+    <servlet-class>user.web.servlet.ReviewServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReviewServ</servlet-name>
+    <url-pattern>/ReviewServ</url-pattern>
+  </servlet-mapping>
+   
   <servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>

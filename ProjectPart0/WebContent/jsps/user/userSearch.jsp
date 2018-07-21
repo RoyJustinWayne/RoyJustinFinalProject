@@ -18,58 +18,32 @@
   </head>
   
   <body>
-  <h1>-User- Single Author Search:</h1>
+  <h1>Search Buttons:</h1>
 <p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-			Name to search：	<input type="text" name="username" /><br/>
-	<button type="submit" name="button" value="InitButton">Search</button>
+<form action="<c:url value='/LuSearch'/>" method="post">
+	<a href="<c:url value='/jsps/LuSearch.jsp'/>" target="_parent">Lu Search Single Author</a>
+</form>
+<form action="<c:url value='/LuSearch2Author'/>" method="post">
+	<a href="<c:url value='/jsps/LuSearch2Author.jsp'/>" target="_parent">Lu as FIRST author</a>
 </form>
 
- <h1>-User- First Author Search:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-			Name to search：	<input type="text" name="username" /><br/>
-	<button type="submit" name="button" value="InitButton">Search</button>
+<form action="<c:url value='/2AuthorSearch'/>" method="post">
+	<a href="<c:url value='/jsps/2AuthorSearch.jsp'/>" target="_parent">Papers Authored by Zhang and Lu</a>
+</form>
+<form action="<c:url value='/MostReviews'/>" method="post">
+	<a href="<c:url value='/jsps/MostReviews.jsp'/>" target="_parent">Most Reviews</a>
+</form>
+<form action="<c:url value='/NoReviews'/>" method="post">
+	<a href="<c:url value='/jsps/NoReviews.jsp'/>" target="_parent">No Reviews</a>
+</form>
+<form action="<c:url value='/MattAndJohn'/>" method="post">
+	<a href="<c:url value='/jsps/MattAndJohn.jsp'/>" target="_parent">Rejected by Matt and John</a>
+</form>
+<form action="<c:url value='/AcceptedPapers'/>" method="post">
+	<a href="<c:url value='/jsps/AcceptedPapers.jsp'/>" target="_parent">Accepted Papers</a>
 </form>
 
- <h1>-User- Co-Author Search:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-	<button type="submit" name="button" value="InitButton">Search</button>
-</form>
 
- <h1>-User- PC Most Reviewed Search:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-	<button type="submit" name="button" value="InitButton">Search</button>
-</form>
-
- <h1>-User- PC NOT Reviewing Search:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-	<button type="submit" name="button" value="InitButton">Search</button>
-</form>
-
-<h1>-User- Paper Rejected By:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-		Name to search (Required)：	<input type="text" name="username" /><br/>
-		Name to search (Required)：	<input type="text" name="username" /><br/>
-	<button type="submit" name="button" value="InitButton">Search</button>
-</form>
-
-<h1>-User- All Accepted Paper:</h1>
-<p style="color: red; font-weight: 900"> ${msg}</p>
-<form action="<c:url value='/ConfManagement'/>" method="post">
-	<input type="hidden" name="method" value="Initialize"/>
-	<button type="submit" name="button" value="InitButton">Search</button>
-</form>
 
 
   </body>

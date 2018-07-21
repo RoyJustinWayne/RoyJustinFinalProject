@@ -38,9 +38,9 @@
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a>
 			<a href="<c:url value='/jsps/user/initialize.jsp'/>" target="_parent">Initialize</a>
-			<a href="<c:url value='/jsps/user/manager.jsp'/>" target="_parent">Manager Screen</a>
-			<a href="<c:url value='/jsps/user/userPaper.jsp'/>" target="_parent">User Paper Screen</a>
-			<a href="<c:url value='/jsps/user/userReport.jsp'/>" target="_parent">User Report Screen</a>
+			<a href="<c:url value='/jsps/PCUpdate.jsp'/>" target="_parent">Program Committee Update Screen</a>
+			<a href="<c:url value='/jsps/PaperUpdate.jsp'/>" target="_parent">Paper Update Screen</a>
+			<a href="<c:url value='/jsps/ReviewUpdate.jsp'/>" target="_parent">Review Update Screen</a>
 			<a href="<c:url value='/jsps/user/userSearch.jsp'/>" target="_parent">Searching</a>		
 		</c:when>
 		<c:otherwise>

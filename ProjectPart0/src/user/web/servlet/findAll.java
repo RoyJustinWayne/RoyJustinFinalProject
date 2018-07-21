@@ -48,8 +48,6 @@ public class findAll extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 		request.getRequestDispatcher("/Queryresult/list.jsp").forward(request, response);
 	}
 

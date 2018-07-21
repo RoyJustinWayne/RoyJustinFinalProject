@@ -22,9 +22,9 @@
 <p style="color: red; font-weight: 900"> ${msg}</p>
 <form action="<c:url value='/ConfManagement'/>" method="post">
 	<input type="hidden" name="method" value="Initialize"/>
-			Program Committee ID to Change：	<input type="text" name="username" /><br/>
+			Report ID to Change：	<input type="text" name="username" /><br/>
 			What column do you want to change (UPDATE ONLY)? <input type="password" name="password" /><br/>
-			What do you want the new value to be (Update ONLY)? <input type="password" name="password" /><br/>
+			What do you want the new value to be (UPDATE ONLY)? <input type="password" name="password" /><br/>
 	<button type="submit" name="button" value="InitButton">Delete</button>
 	<button type="submit" name="button" value="InitButton">Update</button>
 </form>
@@ -32,8 +32,10 @@
 <h1>-User- Report INSERT:</h1>
 <form action="<c:url value='/ConfManagement'/>" method="post">
 	<input type="hidden" name="method" value="Initialize"/>
-			Program Committee Member Name：	<input type="text" name="username" /><br/>
-			How many papers are assigned to this member? <input type="password" name="password" /><br/>
+			Report Name：	<input type="text" name="username" /><br/>
+			Report Description: <input type="password" name="password" /><br/>
+			Report Accepted/Rejected: <input type="password" name="password" /><br/>
+			Report Date: <input type="password" name="password" /><br/>
 	<button type="submit" name="button" value="InitButton">Insert</button>
 </form>
 
