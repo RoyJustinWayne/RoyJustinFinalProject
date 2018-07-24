@@ -20,12 +20,15 @@
 			String PASS = "pass1234";
 			Connection connect = DriverManager.getConnection(URL, USER, PASS);
 		    
-		    Statement stmt = connect.createStatement();
-		    ResultSet rs; 
-		    rs = stmt.executeQuery("CREATE VIEW Accepted AS SELECT PapID, PapTitle From(SELECT p.PapID, PapTitle, Count(*) FROM Paper p INNER JOIN Review r ON r.PapID = p.PapID WHERE RevDecision = 1 GROUP BY PapID Having Count(*) >= 2) AS Accepted");
+		    Statement stmt = connect.createStatement(); 
+		    stmt.executeUpdate("CREATE VIEW Accept AS SELECT PapID, PapTitle From(SELECT p.PapID, PapTitle, Count(*) FROM Paper p INNER JOIN Review r ON r.PapID = p.PapID WHERE RevDecision = 1 GROUP BY PapID Having Count(*) >= 2) AS Accept");
 		
-		    while ( rs.next() ) { %>
-			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
+		    Statement stmt1 = connect.createStatement();
+		    ResultSet rs1; 
+		    rs1 = stmt1.executeQuery("SELECT * FROM Accept");    
+		    
+		    while ( rs1.next() ) { %>
+			<p>Paper ID:<input type= "text" value =<%=rs1.getString("PapID") %> >Title:<input type= "text" value =<%=rs1.getString("PapTitle") %> ></p><br>
 		  <%   }
 		    connect.close();
 		} catch (Exception e) {
@@ -36,9 +39,6 @@
 		<form action="/ProjectPart0/jsps/main.jsp">
 		<input type="submit" value="Homepage">
 		</form>
-				
 	</content>
-	
-
 </body>
 </html>

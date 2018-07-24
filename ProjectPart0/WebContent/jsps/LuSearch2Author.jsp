@@ -26,7 +26,7 @@
 		    rs = stmt.executeQuery("SELECT * FROM Paper WHERE PapAuthor = 'Lu' AND PapAuthor2 IS NOT NULL");
 		
 		    while ( rs.next() ) { %>
-			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
+			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapAuthor") %> >Most Significant Author:<input type= "text" value =<%=rs.getString("PapAuthor") %> >Additional Authors:<input type= "text" value =<%=rs.getString("PapAuthor2") %> ></p><br>
 		  <%   }
 		    connect.close();
 		} catch (Exception e) {

@@ -45,9 +45,9 @@
 		%>
 	</table>
 		<form action="/ProjectPart0/UpdateServ" method="post">
-		<input type="text" name="PCNameAdd" placeholder="Name">>
+		<input type="text" name="PCNameAdd" placeholder="Name">
 		<input type="text" name="PCNumAssignedAdd" placeholder="Number Assigned">
-		<input type="text" name="PCEmailAdd" placeholder="Email">>
+		<input type="text" name="PCEmailAdd" placeholder="Email">
 		<input type="text" name="PCAffiliationAdd" placeholder="Affiliation">
 		<input type="submit" name="Add" value="Add New PC Member"/>
 		</form>

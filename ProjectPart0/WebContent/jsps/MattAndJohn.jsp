@@ -25,7 +25,7 @@
 		    rs = stmt.executeQuery("SELECT * FROM Review WHERE RevName IN ('Matt', 'John') AND RevDecision = 0");
 		
 		    while ( rs.next() ) { %>
-			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
+			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> ></p><br>
 		  <%   }
 		    connect.close();
 		} catch (Exception e) {

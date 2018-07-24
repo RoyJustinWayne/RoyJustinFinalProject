@@ -8,6 +8,7 @@ public class UpdateFunctions
 {	
 	private java.sql.Connection connect;
 	
+	//For less bloated code.
 	public void createConn()
 	{
 		try
@@ -23,7 +24,8 @@ public class UpdateFunctions
 			System.out.print(e);
 		}
 	}
-	public void endConn()
+	//For less bloated code.
+	public void closeConnection()
 	{
 		try
 		{
@@ -55,7 +57,7 @@ public class UpdateFunctions
 		{
 			System.out.print(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	public void deletePaper(String PapID)
 	{
@@ -72,7 +74,7 @@ public class UpdateFunctions
 		{
 			System.out.print(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	
 	public void updatePaper(String PapIDMod, String PapAuthorMod, String PapAuthor2Mod, String PapTitleMod, 
@@ -99,7 +101,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	
 	public void insertPCMember(String name, String assigned, String email, String affiliation)
@@ -121,7 +123,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	
 	public void deletePCMember(String PCIDDel)
@@ -139,7 +141,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	
 	public void updatePCMember(String PCID, String PCName, String PCNumAssigned, String PCEmail, String PCAffiliation)
@@ -162,7 +164,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	public void AssignPCMembers(String PapID, String Name1, String Name2, String Name3)
 	{
@@ -183,7 +185,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	
 	public void insertReview(String RevName, String RevDescript, String PapID, String RevDecision, String RevDate)
@@ -206,7 +208,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	public void deleteReview(String RevIDDel)
 	{
@@ -223,7 +225,7 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}
 	public void updateReview(String RevNameMod, String RevDescriptMod, String RevDecisionMod, 
 			String RevDateMod, String PapIDMod, String RevIDMod)
@@ -247,6 +249,6 @@ public class UpdateFunctions
 		{
 			System.out.println(e);
 		}
-		endConn();
+		closeConnection();
 	}	
 }

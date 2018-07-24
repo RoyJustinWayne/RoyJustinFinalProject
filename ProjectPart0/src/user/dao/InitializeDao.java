@@ -97,7 +97,51 @@ public class InitializeDao
 			      preparedStatement.setString(1, "OverWorked Assett");
 			      preparedStatement.setString(2, "3");
 				      preparedStatement.executeUpdate();
-				  
+				      
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Review(RevName, RevDescript, RevDecision, RevDate, PapID) values (?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Matt");
+				      preparedStatement.setString(2, "Worst Paper Ever");
+				      preparedStatement.setInt(3, 0);
+				      preparedStatement.setDate(4, java.sql.Date.valueOf("2017-09-04"));
+				      preparedStatement.setString(5, "1");
+				      preparedStatement.executeUpdate();
+			  
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Review(RevName, RevDescript, RevDecision, RevDate, PapID) values (?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "John");
+				      preparedStatement.setString(2, "Ditto What Matt Said");
+				      preparedStatement.setInt(3, 0);
+				      preparedStatement.setDate(4, java.sql.Date.valueOf("2017-09-05"));
+				      preparedStatement.setString(5, "1");
+				      preparedStatement.executeUpdate();
+			      
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Review(RevName, RevDescript, RevDecision, RevDate, PapID) values (?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Jroy");
+				      preparedStatement.setString(2, "Best Paper Ever");
+				      preparedStatement.setInt(3, 1);
+				      preparedStatement.setDate(4, java.sql.Date.valueOf("2016-09-05"));
+				      preparedStatement.setString(5, "2");
+				      preparedStatement.executeUpdate();
+
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Review(RevName, RevDescript, RevDecision, RevDate, PapID) values (?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Broy");
+				      preparedStatement.setString(2, "Totally Best Paper Ever");
+				      preparedStatement.setInt(3, 1);
+				      preparedStatement.setDate(4, java.sql.Date.valueOf("2016-09-06"));
+				      preparedStatement.setString(5, "2");
+				      preparedStatement.executeUpdate();
+			      
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Review(RevName, RevDescript, RevDecision, RevDate, PapID) values (?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Lroy");
+				      preparedStatement.setString(2, "By Far Best Paper Ever");
+				      preparedStatement.setInt(3, 1);
+				      preparedStatement.setDate(4, java.sql.Date.valueOf("2016-09-07"));
+				      preparedStatement.setString(5, "2");
+				      preparedStatement.executeUpdate();
 			
 		}	catch(SQLException e) {
 			throw new RuntimeException(e);
