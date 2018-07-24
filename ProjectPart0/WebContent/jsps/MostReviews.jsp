@@ -24,7 +24,7 @@
 		    rs = stmt.executeQuery("SELECT * FROM ProgramCommittee WHERE PCNumAssigned = (SELECT MAX(PCNumAssigned) FROM ProgramCommittee)");
 		
 		    while ( rs.next() ) { %>
-			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
+			<p>Asset ID:<input type= "text" value =<%=rs.getString("PCName") %> >Assigned:<input type= "text" value =<%=rs.getString("PCNumAssigned") %> ></p><br>
 		  <%   }
 		    connect.close();
 		} catch (Exception e) {

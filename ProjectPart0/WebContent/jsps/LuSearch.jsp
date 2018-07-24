@@ -25,9 +25,10 @@
 		    ResultSet rs; 
 		    rs = stmt.executeQuery("SELECT * FROM Paper WHERE PapAuthor = 'Lu' AND PapAuthor2 IS NULL");
 		
-		    while ( rs.next() ) { %>
+		    while ( rs.next() ) { 
+		    %>
 			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
-		  <%   }
+		    <%   }
 		    connect.close();
 		} catch (Exception e) {
 		} 

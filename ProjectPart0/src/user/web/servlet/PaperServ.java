@@ -37,29 +37,41 @@ public class PaperServ extends HttpServlet
 		String PapTitle = request.getParameter("PapTitle");
 		String PapAbstract = request.getParameter("PapAbstract");
 		String PapPDF = request.getParameter("PapPDF");
+		String PapAccepted = request.getParameter("PapAccepted");
+		
+		String PapIDMod = request.getParameter("PapIDMod");
+		String PapAuthorMod = request.getParameter("PapAuthorMod");
+		String PapAuthor2Mod = request.getParameter("PapAuthor2Mod");
+		String PapTitleMod = request.getParameter("PapTitleMod");
+		String PapAbstractMod = request.getParameter("PapAbstractMod");
+		String PapPDFMod = request.getParameter("PapPDFMod");
+		String PapAcceptedMod = request.getParameter("PapAcceptedMod");
+		
+		String PapIDDel = request.getParameter("PapIDDel");
 		
 		String PapAuthorAdd = request.getParameter("PapAuthorAdd");
 		String PapAuthor2Add = request.getParameter("PapAuthor2Add");
 		String PapTitleAdd = request.getParameter("PapTitleAdd");
 		String PapAbstractAdd = request.getParameter("PapAbstractAdd");
 		String PapPDFAdd = request.getParameter("PapPDFAdd");
+		String PapAcceptedAdd = request.getParameter("PapAcceptedAdd");
 
 	    if(request.getParameter("Update")!=null)
 	    {
 			UpdateFunctions x = new UpdateFunctions();
-			x.updatePaper(PapID, PapAuthor,PapAuthor2,PapTitle,PapAbstract,PapPDF);
+			x.updatePaper(PapIDMod, PapAuthorMod,PapAuthor2Mod, PapTitleMod,PapAbstractMod,PapPDFMod, PapAcceptedMod);
 	    }
 		
 	    if(request.getParameter("Delete")!=null)
 	    {
 	    	UpdateFunctions y = new UpdateFunctions();
-			y.deletePaper(PapID);
+			y.deletePaper(PapIDDel);
 	    }
 	    
 	    if(request.getParameter("Add")!=null)
 	    {
 	    	UpdateFunctions z = new UpdateFunctions();
-			z.insertPaper(PapTitleAdd, PapAbstractAdd, PapPDFAdd, PapAuthorAdd, PapAuthor2Add);
+			z.insertPaper(PapTitleAdd, PapAbstractAdd, PapPDFAdd, PapAuthorAdd, PapAuthor2Add, PapAcceptedAdd);
 	    }
 	    request.getRequestDispatcher("/jsps/PaperUpdate.jsp").forward(request, response);	
 	}

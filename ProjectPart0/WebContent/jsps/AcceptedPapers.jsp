@@ -22,7 +22,7 @@
 		    
 		    Statement stmt = connect.createStatement();
 		    ResultSet rs; 
-		    rs = stmt.executeQuery("SELECT * FROM Paper WHERE PapAccepted = 1");
+		    rs = stmt.executeQuery("CREATE VIEW Accepted AS SELECT PapID, PapTitle From(SELECT p.PapID, PapTitle, Count(*) FROM Paper p INNER JOIN Review r ON r.PapID = p.PapID WHERE RevDecision = 1 GROUP BY PapID Having Count(*) >= 2) AS Accepted");
 		
 		    while ( rs.next() ) { %>
 			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>

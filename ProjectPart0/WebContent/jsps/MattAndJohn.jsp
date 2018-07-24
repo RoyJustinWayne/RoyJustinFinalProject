@@ -22,7 +22,7 @@
 		    
 		    Statement stmt = connect.createStatement();
 		    ResultSet rs; 
-		    rs = stmt.executeQuery("SELECT * FROM Review WHERE RevID = (SELECT RevDecision WHERE RevDecision = 0 and RevName = 'John') and RevID = (SELECT RevDecision WHERE RevDecision = 0 and RevName = 'Matt')");
+		    rs = stmt.executeQuery("SELECT * FROM Review WHERE RevName IN ('Matt', 'John') AND RevDecision = 0");
 		
 		    while ( rs.next() ) { %>
 			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>

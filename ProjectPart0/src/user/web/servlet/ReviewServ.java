@@ -37,6 +37,15 @@ public class ReviewServ extends HttpServlet
 		String RevDate = request.getParameter("RevDate");
 		String PapID = request.getParameter("PapID");
 		
+		String RevIDMod = request.getParameter("RevIDMod");
+		String RevNameMod = request.getParameter("RevNameMod");
+		String RevDescriptMod = request.getParameter("RevDescriptMod");
+		String RevDecisionMod = request.getParameter("RevDecisionMod");
+		String RevDateMod = request.getParameter("RevDateMod");
+		String PapIDMod = request.getParameter("PapIDMod");
+		
+		String RevIDDel = request.getParameter("RevIDDel");
+		
 		String RevNameAdd = request.getParameter("RevNameAdd");
 		String RevDescriptAdd = request.getParameter("RevDescriptAdd");
 		String RevDecisionAdd = request.getParameter("RevDecisionAdd");
@@ -46,13 +55,13 @@ public class ReviewServ extends HttpServlet
 	    if(request.getParameter("Update")!=null)
 	    {
 			UpdateFunctions x = new UpdateFunctions();
-			x.updateReview(RevID, RevName, RevDescript, RevDecision, RevDate, PapID);
+			x.updateReview(RevNameMod, RevDescriptMod, RevDecisionMod, RevDateMod, PapIDMod, RevIDMod);
 	    }
 		
 	    if(request.getParameter("Delete")!=null)
 	    {
 	    	UpdateFunctions y = new UpdateFunctions();
-			y.deleteReview(RevID);
+			y.deleteReview(RevIDDel);
 	    }
 	    
 	    if(request.getParameter("Add")!=null)

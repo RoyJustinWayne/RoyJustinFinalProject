@@ -25,7 +25,7 @@
 		    rs = stmt.executeQuery("SELECT * FROM ProgramCommittee WHERE PCNumAssigned = 0");
 		
 		    while ( rs.next() ) { %>
-			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
+			<p>PC ID:<input type= "text" value =<%=rs.getString("PCID") %> >PCName:<input type= "text" value =<%=rs.getString("PCName") %> ></p><br>
 		  <%   }
 		    connect.close();
 		} catch (Exception e) {

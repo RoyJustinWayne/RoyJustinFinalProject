@@ -50,13 +50,55 @@ public class InitializeDao
 				
 				PreparedStatement preparedStatement = null;
 				
-				/*preparedStatement = connect
-				          .prepareStatement("insert into  ProgramCommittee(PCID, PCName, PCNumAssigned) values (?, ?, ?)");
-				      preparedStatement.setString(1, "1");
-				      preparedStatement.setString(2, "Justin Roy");
-				      preparedStatement.setString(3, "5");
+				preparedStatement = connect
+				          .prepareStatement("insert into  ProgramCommittee(PCName, PCNumAssigned) values (?, ?)");
+				      preparedStatement.setString(1, "Justin Roy");
+				      preparedStatement.setString(2, "2");
 				      preparedStatement.executeUpdate();
-			*/
+				      
+				      preparedStatement = connect
+					          .prepareStatement("insert into  ProgramCommittee(PCName, PCNumAssigned) values (?, ?)");
+					      preparedStatement.setString(1, "Underworked");
+					      preparedStatement.setString(2, "0");
+					      preparedStatement.executeUpdate();
+				      
+				 preparedStatement = connect
+			          .prepareStatement("insert into  Paper(PapAuthor, PapAuthor2, PapTitle, PapAbstract, PapPDF, PapAccepted) values (?, ?, ?, ?, ?,?)");
+			      preparedStatement.setString(1, "Lu");
+			      preparedStatement.setString(2, "NULL");
+			      preparedStatement.setString(3, "LuIsAlone");
+			      preparedStatement.setString(4, "Lu Alone Abstract");
+			      preparedStatement.setString(5, "Lu Alone PDF");
+			      preparedStatement.setInt(6, 1);
+			      preparedStatement.executeUpdate();
+
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Paper(PapAuthor, PapAuthor2, PapTitle, PapAbstract, PapPDF, PapAccepted) values (?, ?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Lu");
+				      preparedStatement.setString(2, "Zhang");
+				      preparedStatement.setString(3, "LuIsNOTAlone");
+				      preparedStatement.setString(4, "Lu Alone NOT Abstract");
+				      preparedStatement.setString(5, "Lu Alone NOT PDF");
+				      preparedStatement.setInt(6, 0);
+				      preparedStatement.executeUpdate();
+				      
+			      preparedStatement = connect
+				          .prepareStatement("insert into  Paper(PapAuthor, PapAuthor2, PapTitle, PapAbstract, PapPDF, PapAccepted) values (?, ?, ?, ?, ?, ?)");
+				      preparedStatement.setString(1, "Zhang");
+				      preparedStatement.setString(2, "Lu");
+				      preparedStatement.setString(3, "LuIsNOTAlone2");
+				      preparedStatement.setString(4, "Lu Alone NOT 2 Abstract");
+				      preparedStatement.setString(5, "Lu Alone NOT 2 PDF");
+				      preparedStatement.setInt(6, 0);
+				      preparedStatement.executeUpdate();
+				      
+			      preparedStatement = connect
+				          .prepareStatement("insert into  ProgramCommittee(PCName, PCNumAssigned) values (?, ?)");
+			      preparedStatement.setString(1, "OverWorked Assett");
+			      preparedStatement.setString(2, "3");
+				      preparedStatement.executeUpdate();
+				  
+			
 		}	catch(SQLException e) {
 			throw new RuntimeException(e);
 		} catch (InstantiationException e) {

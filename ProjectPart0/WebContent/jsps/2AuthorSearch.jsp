@@ -23,7 +23,7 @@
 		    
 		    Statement stmt = connect.createStatement();
 		    ResultSet rs; 
-		    rs = stmt.executeQuery("SELECT * FROM Paper WHERE coalesce(PapAuthor, PapAuthor2) IS NOT NULL");
+		    rs = stmt.executeQuery("SELECT * FROM Paper WHERE (PapAuthor = 'Lu' AND PapAuthor2 = 'Zhang') OR (PapAuthor = 'Zhang' AND PapAuthor2 = 'Lu')");
 		
 		    while ( rs.next() ) { %>
 			<p>Paper ID:<input type= "text" value =<%=rs.getString("PapID") %> >Title:<input type= "text" value =<%=rs.getString("PapTitle") %> ></p><br>
